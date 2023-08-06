@@ -23,18 +23,22 @@
            fetch="https://github.com/aex-tmp"
            revision="refs/heads/12.x" />
 
+  <remote  name="derp-rev"
+           fetch="https://github.com/DerpFest12-Revived"
+           revision="12.1" />
+
   <!-- DerpFest -->
   <!-- Rootdir -->
   <project path="art" name="art" groups="pdk" remote="derp" />
   <project path="bionic" name="bionic" groups="pdk" remote="derp" />
   <project path="libcore" name="libcore" groups="pdk" remote="derp" />
-  <project path="manifest" name="manifest" remote="derp" />
+  <project path="manifest" name="manifest" remote="derp-rev" />
 
   <!-- Bootable -->
   <project path="bootable/recovery" name="bootable_recovery" groups="pdk" remote="derp" />
 
   <!-- Build -->
-  <project path="build/make" name="build" groups="pdk" remote="derp" >
+  <project path="build/make" name="build" groups="pdk" remote="derp-rev" >
     <copyfile src="core/root.mk" dest="Makefile" />
     <linkfile src="CleanSpec.mk" dest="build/CleanSpec.mk" />
     <linkfile src="buildspec.mk.default" dest="build/buildspec.mk.default" />
@@ -81,8 +85,8 @@
   <project path="external/zlib-ng" name="external_zlib-ng" groups="pdk" remote="derp" />
 
   <!-- Frameworks -->
-  <project path="frameworks/av" name="frameworks_av" groups="pdk" remote="derp" />
-  <project path="frameworks/base" name="frameworks_base" groups="pdk-cw-fs,pdk-fs" remote="derp" />
+  <project path="frameworks/av" name="frameworks_av" groups="pdk" remote="derp-rev" />
+  <project path="frameworks/base" name="frameworks_base" groups="pdk-cw-fs,pdk-fs" remote="derp-rev" />
   <project path="frameworks/libs/systemui" name="frameworks_libs_systemui" groups="pdk-cw-fs,pdk-fs" remote="derp" />
   <project path="frameworks/minikin" name="frameworks_minikin" groups="pdk" remote="derp" />
   <project path="frameworks/native" name="frameworks_native" groups="pdk" remote="derp" />
@@ -154,7 +158,7 @@
   <project path="packages/apps/FaceUnlockService" name="packages_apps_FaceUnlockService" remote="derp" />
   <project path="packages/apps/GameSpace" name="packages_apps_GameSpace" groups="pdk-fs" remote="derp" />
   <project path="packages/apps/Nfc" name="packages_apps_Nfc" groups="apps_nfc,pdk-fs" remote="derp" />
-  <project path="packages/apps/Settings" name="packages_apps_Settings" groups="pdk-fs" remote="derp" />
+  <project path="packages/apps/Settings" name="packages_apps_Settings" groups="pdk-fs" remote="derp-rev" />
   <project path="packages/apps/SettingsIntelligence" name="packages_apps_SettingsIntelligence" groups="pdk-fs" remote="derp" />
   <project path="packages/apps/SimpleDeviceConfig" name="packages_apps_SimpleDeviceConfig" groups="pdk-fs" remote="derp" />
   <project path="packages/apps/ThemePicker" name="packages_apps_ThemePicker" groups="pdk-fs" remote="derp" />
@@ -173,7 +177,7 @@
 
   <!-- System -->
   <project path="system/apex" name="system_apex" groups="pdk" remote="derp" />
-  <project path="system/bt" name="system_bt" groups="pdk" remote="derp" />
+  <project path="system/bt" name="system_bt" groups="pdk" remote="derp-rev" />
   <project path="system/connectivity/wificond" name="system_connectivity_wificond" groups="pdk" remote="derp" />
   <project path="system/core" name="system_core" groups="pdk" remote="derp" />
   <project path="system/extras" name="system_extras" groups="pdk" remote="derp" />
@@ -195,9 +199,9 @@
   <project path="vendor/nxp/opensource/commonsys/external/libnfc-nci" name="vendor_nxp_opensource_external_libnfc-nci" remote="derp" />
   <project path="vendor/nxp/opensource/commonsys/frameworks" name="vendor_nxp_opensource_frameworks" remote="derp" />
   <project path="vendor/nxp/opensource/commonsys/packages/apps/Nfc" name="vendor_nxp_opensource_packages_apps_Nfc" remote="derp" />
-  <project path="vendor/nxp/opensource/pn5xx/halimpl" name="vendor_nxp_opensource_halimpl" remote="derp" revision="12-pn5xx" />
+  <project path="vendor/nxp/opensource/pn5xx/halimpl" name="vendor_nxp_opensource_halimpl" remote="derp-rev" revision="12-pn5xx" />
   <project path="vendor/nxp/opensource/pn5xx/hidlimpl" name="vendor_nxp_opensource_hidlimpl" remote="derp" revision="12-pn5xx" />
-  <project path="vendor/nxp/opensource/sn100x/halimpl" name="vendor_nxp_opensource_halimpl" remote="derp" revision="12-sn100x" />
+  <project path="vendor/nxp/opensource/sn100x/halimpl" name="vendor_nxp_opensource_halimpl" remote="derp-rev" revision="12-sn100x" />
   <project path="vendor/nxp/opensource/sn100x/hidlimpl" name="vendor_nxp_opensource_hidlimpl" remote="derp" revision="12-sn100x" />
   <project path="vendor/nxp/secure_element" name="vendor_nxp_secure_element" remote="derp" />
   <project path="vendor/nxp/secure_element_extns" name="vendor_nxp_secure_element_extns" remote="derp" />
